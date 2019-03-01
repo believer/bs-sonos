@@ -33,6 +33,7 @@ type currentTrackResponse = {
 };
 
 type currentPlayingState =
+  | Paused
   | Stopped
   | Playing
   | UnknownState;
@@ -76,6 +77,7 @@ let currentTrackResponse = json => {
 let currentPlayingState = currentState =>
   switch (currentState) {
   | "stopped" => Stopped
+  | "paused" => Paused
   | "playing" => Playing
   | _ => UnknownState
   };
