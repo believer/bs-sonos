@@ -24,35 +24,48 @@ type sonosGroup = {
 external groupRenderingControl: string => sonosGroup = "GroupRenderingControl";
 
 /* Methods */
+type spotifyRegion;
 
 [@bs.module "sonos"] [@bs.scope "SpotifyRegion"]
-external regionEurope: string = "EU";
-
-[@bs.send] external setSpotifyRegion: (sonosDevice, string) => unit = "";
+external regionEurope: spotifyRegion = "EU";
 
 [@bs.send]
-external getVolume: (sonosDevice, unit) => Js.Promise.t(float) = "";
+external setSpotifyRegion: (sonosDevice, spotifyRegion) => unit =
+  "setsetSpotifyRegion";
+
 [@bs.send]
-external currentTrack: (sonosDevice, unit) => Js.Promise.t('a) = "";
+external getVolume: (sonosDevice, unit) => Js.Promise.t(float) = "getVolume";
 [@bs.send]
-external queue: (sonosDevice, string, int) => Js.Promise.t('a) = "";
+external currentTrack: (sonosDevice, unit) => Js.Promise.t('a) =
+  "currentTrack";
+[@bs.send]
+external queue: (sonosDevice, string, int) => Js.Promise.t('a) = "queue";
 [@bs.send]
 external queueAsLast: (sonosDevice, string) => Js.Promise.t('a) = "queue";
 [@bs.send]
-external getCurrentState: (sonosDevice, unit) => Js.Promise.t(string) = "";
+external getCurrentState: (sonosDevice, unit) => Js.Promise.t(string) =
+  "getCurrentState";
 [@bs.send]
-external selectQueue: (sonosDevice, unit) => Js.Promise.t(bool) = "";
+external selectQueue: (sonosDevice, unit) => Js.Promise.t(bool) =
+  "selectQueue";
 [@bs.send]
-external selectTrack: (sonosDevice, int) => Js.Promise.t(bool) = "";
+external selectTrack: (sonosDevice, int) => Js.Promise.t(bool) =
+  "selectTrack";
 [@bs.send]
 external searchMusicLibrary: (sonosDevice, string, string) => Js.Promise.t('a) =
-  "";
+  "searchMusicLibrary";
 
-[@bs.send] external play: (sonosDevice, unit) => Js.Promise.t(bool) = "";
-[@bs.send] external pause: (sonosDevice, unit) => Js.Promise.t(bool) = "";
-[@bs.send] external flush: (sonosDevice, unit) => Js.Promise.t(bool) = "";
-[@bs.send] external setVolume: (sonosDevice, float) => Js.Promise.t('a) = "";
-[@bs.send] external getQueue: (sonosDevice, unit) => Js.Promise.t('a) = "";
-[@bs.send] external setMuted: (sonosDevice, bool) => Js.Promise.t(bool) = "";
-[@bs.send] external next: (sonosDevice, unit) => Js.Promise.t(bool) = "";
-[@bs.send] external previous: (sonosDevice, unit) => Js.Promise.t(bool) = "";
+[@bs.send] external play: (sonosDevice, unit) => Js.Promise.t(bool) = "play";
+[@bs.send]
+external pause: (sonosDevice, unit) => Js.Promise.t(bool) = "pause";
+[@bs.send]
+external flush: (sonosDevice, unit) => Js.Promise.t(bool) = "flush";
+[@bs.send]
+external setVolume: (sonosDevice, float) => Js.Promise.t('a) = "setVolume";
+[@bs.send]
+external getQueue: (sonosDevice, unit) => Js.Promise.t('a) = "getQueue";
+[@bs.send]
+external setMuted: (sonosDevice, bool) => Js.Promise.t(bool) = "setMuted";
+[@bs.send] external next: (sonosDevice, unit) => Js.Promise.t(bool) = "next";
+[@bs.send]
+external previous: (sonosDevice, unit) => Js.Promise.t(bool) = "previous";
