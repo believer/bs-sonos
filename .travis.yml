@@ -1,0 +1,26 @@
+jobs:
+  include:
+    - stage: test
+      name: "Unit tests"
+      language: node_js
+      node_js:
+        - 12
+      install:
+        - npm ci
+      script:
+        - npm run build
+        - npm test
+    - stage: release
+      if: branch = master
+      name: "Create release notes with semantic-release and deploy to npm"
+      language: node_js
+      node_js:
+        - 12
+      script:
+        - npx semantic-release
+stages:
+  - test
+  - release
+    if: branch = master AND type != pull_request
+  - deploy
+    if: branch = master AND type != pull_request
