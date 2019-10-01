@@ -22,5 +22,3 @@ stages:
   - test
   - release
     if: branch = master AND type != pull_request
-  - deploy
-    if: branch = master AND type != pull_request
