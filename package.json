@@ -5,9 +5,9 @@
     "build": "bsb -make-world",
     "start": "BS_WATCH_CLEAR=true bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "is-ci \"test:ci\" \"test:dev\"",
-    "test:ci": "npm run build && jest",
-    "test:dev": "jest --watch"
+    "test": "is-ci \"test:ci\" \"test:watch\"",
+    "test:ci": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "BuckleScript"
@@ -16,6 +16,11 @@
   "license": "MIT",
   "devDependencies": {
     "@glennsl/bs-jest": "0.4.9",
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/commit-analyzer": "6.3.0",
+    "@semantic-release/git": "7.0.16",
+    "@semantic-release/npm": "5.1.15",
+    "@semantic-release/release-notes-generator": "7.3.0",
     "bs-platform": "5.0.6",
     "is-ci-cli": "1.1.1"
   },
