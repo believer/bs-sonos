@@ -11,9 +11,9 @@ jobs:
         - npm run build
         - npm test
     - stage: release
-      if: branch = master
       name: "Create release notes with semantic-release and deploy to npm"
       language: node_js
+      if: branch = master
       node_js:
         - 12
       script:
@@ -21,4 +21,3 @@ jobs:
 stages:
   - test
   - release
-    if: branch = master AND type != pull_request
