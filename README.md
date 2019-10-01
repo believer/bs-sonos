@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/believer/bs-sonos.svg?branch=master)](https://travis-ci.com/believer/bs-sonos)
 
 BuckleScript bindings for [sonos](https://github.com/bencevans/node-sonos) used
-to control an
+to control one or more Sonos speakers.
 
 ## Example
 
