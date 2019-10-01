@@ -7,7 +7,7 @@ to control an
 
 ## Example
 
-```reasonml
+```reason
 open Methods;
 
 /* Connect to a Sonos speaker using its IP */
