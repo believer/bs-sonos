@@ -19,5 +19,6 @@ jobs:
       script:
         - npx semantic-release
 stages:
-  - test
-  - release
+  - name: test
+  - name: release
+    if: branch = master AND type != pull_request
