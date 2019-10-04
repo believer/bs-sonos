@@ -63,6 +63,7 @@ module Search = {
 
 module Queue = {
   [@bs.send] external clear: (sonos, unit) => Js.Promise.t(bool) = "flush";
+  [@bs.send] external removeMultipleTracks: (sonos, int, int) => Js.Promise.t('a) = "removeTracksFromQueue";
   [@bs.send] external get: (sonos, unit) => Js.Promise.t('a) = "getQueue";
   [@bs.send] external asLast: (sonos, string) => Js.Promise.t('a) = "queue";
   [@bs.send]
