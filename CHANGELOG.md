@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/believer/bs-sonos/compare/v2.0.0...v2.1.0) (2019-10-05)
+
+
+### Bug Fixes
+
+* setSpotifyRegion ([ffc006b](https://github.com/believer/bs-sonos/commit/ffc006b))
+
+
+### Features
+
+* removeMultipleTracks binding ([#14](https://github.com/believer/bs-sonos/issues/14)) ([e091e28](https://github.com/believer/bs-sonos/commit/e091e28))
+
 # [2.0.0](https://github.com/believer/bs-sonos/compare/v1.0.0...v2.0.0) (2019-10-01)
 
 
