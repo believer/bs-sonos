@@ -31,7 +31,7 @@ module SpotifyRegion = {
   type t;
 
   [@bs.module "sonos"] [@bs.scope "SpotifyRegion"] external europe: t = "EU";
-  [@bs.send] external set: (sonos, t) => unit = "setsetSpotifyRegion";
+  [@bs.send] external set: (sonos, t) => unit = "setSpotifyRegion";
 };
 
 module PlayerControl = {
