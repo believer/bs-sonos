@@ -1,6 +1,6 @@
 {
   "name": "bs-sonos",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "BS_WATCH_CLEAR=true bsb -make-world -w",

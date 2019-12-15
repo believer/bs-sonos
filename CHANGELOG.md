@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/believer/bs-sonos/compare/v2.1.0...v3.0.0) (2019-12-15)
+
+
+### Features
+
+* upgrade to bucklescript 7 ([7fb54d0](https://github.com/believer/bs-sonos/commit/7fb54d01ec0f728b78a1ae299d8da927ab5a4f59))
+
+
+### BREAKING CHANGES
+
+* upgrades bucklescript
+
 # [2.1.0](https://github.com/believer/bs-sonos/compare/v2.0.0...v2.1.0) (2019-10-05)
 
 
